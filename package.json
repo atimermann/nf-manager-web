@@ -32,5 +32,5 @@
     "primevue": "^3.32.2",
     "socket.io-client": "^4.7.2"
   },
-  "version": "0.0.1"
+  "version": "0.0.2"
 }
