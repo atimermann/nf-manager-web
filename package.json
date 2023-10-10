@@ -1,28 +1,29 @@
 {
-  "name": "nuxt-app",
-  "private": true,
+  "name": "@agtm/nf-manage-webr",
+  "description": "Frontend of the nf-manager project",
+  "private": false,
   "scripts": {
+    "publish-patch": "npm test && npm version patch && npm publish --access public && git push",
+    "publish-minor": "npm test && npm version minor && npm publish --access public && git push",
+    "publish-major": "npm test && npm version major && npm publish --access public && git push",
     "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "update": "npm update @agtm/nuxt-layer-adminlte-primeface && npm list @agtm/nuxt-layer-adminlte-primeface"
+    "update": "npm update @agtm/nuxt-layer-adminlte-primeface && npm list @agtm/nuxt-layer-adminlte-primeface",
+    "lint:test": "npx eslint src",
+    "lint": "npx eslint --fix src",
+    "link": "npm link @agtm/nuxt-layer-adminlte-primeface @agtm/util",
+    "test": "npm run lint"
   },
   "devDependencies": {
-    "@babel/preset-env": "^7.20.2",
-    "@nuxt/devtools": "^0.8.0",
-    "@nuxt/eslint-config": "^0.1.1",
-    "@nuxt/test-utils": "^3.4.1",
-    "babel-jest": "^29.5.0",
-    "babel-plugin-module-resolver": "^5.0.0",
-    "dotenv-cli": "^7.3.0",
-    "eslint": "^8.28.0",
-    "eslint-config-standard": "^17.0.0",
-    "eslint-plugin-jest": "^27.2.1",
-    "jest": "^29.5.0",
-    "nuxt": "^3.4.0",
-    "vitest": "^0.30.1"
+    "@nuxt/devtools": "latest",
+    "@nuxt/eslint-config": "^0.2.0",
+    "eslint": "^8.50.0",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-plugin-jest": "^27.4.0",
+    "nuxt": "^3.7.3"
   },
   "dependencies": {
     "@agtm/nuxt-layer-adminlte-primeface": "^0.2.4",
