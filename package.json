@@ -1,5 +1,5 @@
 {
-  "name": "@agtm/nf-manage-webr",
+  "name": "@agtm/nf-manage-web",
   "description": "Frontend of the nf-manager project",
   "private": false,
   "scripts": {
