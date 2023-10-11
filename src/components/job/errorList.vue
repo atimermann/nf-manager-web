@@ -35,7 +35,7 @@
 import Column from 'primevue/column'
 import DataTable from 'primevue/datatable'
 import Dialog from 'primevue/dialog'
-import { orderBy } from 'lodash'
+import orderBy from 'lodash/orderBy.js'
 
 const errorDescriptionDialogVisible = ref(false)
 const errorDescriptionText = ref('')
