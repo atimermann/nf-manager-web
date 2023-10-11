@@ -2,6 +2,7 @@
   "name": "@agtm/nf-manager-web",
   "description": "Frontend of the nf-manager project",
   "private": false,
+  "main": "./index.mjs",
   "scripts": {
     "publish-patch": "npm test && npm version patch && npm publish --access public && git push",
     "publish-minor": "npm test && npm version minor && npm publish --access public && git push",
