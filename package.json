@@ -16,7 +16,6 @@
     "commit": "cz",
     "release": "./scripts/release.sh",
     "prepack": "nuxt-module-build build",
-    "--------------": "-----------------",
     "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
@@ -64,5 +63,12 @@
   "repository": {
     "type": "git",
     "url": "git@github.com:atimermann/nf-manager-web.git"
-  }
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "files": [
+    "dist",
+    "src"
+  ]
 }
