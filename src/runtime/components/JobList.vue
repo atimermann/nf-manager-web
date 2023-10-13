@@ -43,7 +43,9 @@ import Column from 'primevue/column'
 import Button from 'primevue/button'
 import { io } from 'socket.io-client'
 import cronstrue from 'cronstrue/i18n'
-import snakeCase from 'lodash/snakeCase.js'
+import { snakeCase } from 'lodash'
+
+import { useRuntimeConfig, ref } from '#imports'
 
 /**
  * Loads a public attribute defined with runtimeconfig and defined with an environment variable, validating whether it was defined
