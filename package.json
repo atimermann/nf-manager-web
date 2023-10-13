@@ -13,6 +13,7 @@
   "main": "./dist/module.mjs",
   "types": "./dist/types.d.ts",
   "scripts": {
+    "commit": "cz",
     "prepack": "nuxt-module-build build",
     "--------------": "-----------------",
     "publish-patch": "npm test && npm version patch && npm publish --access public && git push",
@@ -33,6 +34,8 @@
     "@nuxt/devtools": "latest",
     "@nuxt/eslint-config": "^0.2.0",
     "@nuxt/module-builder": "^0.5.2",
+    "commitizen": "^4.3.0",
+    "cz-conventional-changelog": "^3.3.0",
     "eslint": "^8.50.0",
     "eslint-config-standard": "^17.1.0",
     "eslint-plugin-jest": "^27.4.0",
@@ -47,5 +50,10 @@
     "primevue": "^3.32.2",
     "socket.io-client": "^4.7.2"
   },
-  "version": "0.0.5"
+  "version": "0.0.5",
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
 }
