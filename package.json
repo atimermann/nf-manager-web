@@ -1,9 +1,20 @@
 {
   "name": "@agtm/nf-manager-web",
-  "description": "Frontend of the nf-manager project",
+  "description": "Frontend the nf-manager project and module for others nuxt project.",
   "private": false,
-  "main": "./index.mjs",
+  "exports": {
+    ".": {
+      "types": "./dist/types.d.ts",
+      "import": "./dist/module.mjs",
+      "require": "./dist/module.cjs"
+    }
+  },
+  "type": "module",
+  "main": "./dist/module.mjs",
+  "types": "./dist/types.d.ts",
   "scripts": {
+    "prepack": "nuxt-module-build build",
+    "--------------": "-----------------",
     "publish-patch": "npm test && npm version patch && npm publish --access public && git push",
     "publish-minor": "npm test && npm version minor && npm publish --access public && git push",
     "publish-major": "npm test && npm version major && npm publish --access public && git push",
@@ -21,6 +32,7 @@
   "devDependencies": {
     "@nuxt/devtools": "latest",
     "@nuxt/eslint-config": "^0.2.0",
+    "@nuxt/module-builder": "^0.5.2",
     "eslint": "^8.50.0",
     "eslint-config-standard": "^17.1.0",
     "eslint-plugin-jest": "^27.4.0",
@@ -28,6 +40,8 @@
   },
   "dependencies": {
     "@agtm/nuxt-layer-adminlte-primeface": "^0.2.4",
+    "@agtm/util": "^4.2.2",
+    "@nuxt/kit": "^3.7.4",
     "cronstrue": "^2.31.0",
     "lodash": "^4.17.21",
     "primevue": "^3.32.2",

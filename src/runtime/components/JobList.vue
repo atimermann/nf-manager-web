@@ -43,7 +43,31 @@ import Column from 'primevue/column'
 import Button from 'primevue/button'
 import { io } from 'socket.io-client'
 import cronstrue from 'cronstrue/i18n'
-import { getEnvConfig } from '@agtm/util/nuxt'
+import snakeCase from 'lodash/snakeCase.js'
+
+/**
+ * Loads a public attribute defined with runtimeconfig and defined with an environment variable, validating whether it was defined
+ *
+ * @param {string} attributeName  Nome do atributo a ser carregado e validado
+ * @param {boolean }required      Se é requerido
+ * @returns {Promise<void>}
+ *
+ * TODO: Criar um módulo nuxt e transformar em composable() e por em um projeto separado compartilhado @agtm/nuxt-util
+ */
+function getEnvConfig (attributeName, required = true) {
+  const config = useRuntimeConfig()
+
+  const envConfig = config.public[attributeName]
+
+  if (!envConfig && required) {
+    // eslint-disable-next-line no-undef
+    throw showError({
+      statusCode: 500,
+      statusMessage: `Environment variable "NUXT_PUBLIC_${snakeCase(attributeName).toUpperCase()}" not defined in env file.`
+    })
+  }
+  return envConfig
+}
 
 const socketHostname = getEnvConfig('socketHostname')
 const socketPort = getEnvConfig('socketPort')

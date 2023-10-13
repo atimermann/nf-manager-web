@@ -1,3 +1,20 @@
+# Nf Manager Web
+
+Este projeto funciona tanto como um layer, como um módulo, como layer ele trás o frontend completo para gerenciar e
+monitorar sua aplicação usando node-framework, como modulo ele disponibiliza alguns assets como componentes prontos com
+listagem de monitoramento para você adaptar ao seu frontne já existente
+
+## Utilizando nf-manager-web como layer
+
+## Utilizando nf-manager-web como modulo
+
+## TODO:
+
+* Criar projeto com documentação do ZIM no github convertido para markdown e linkar aqui
+
+---
+[old]
+
 # Nuxt 3 Minimal Starter
 
 Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
