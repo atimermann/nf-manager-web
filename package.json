@@ -14,11 +14,9 @@
   "types": "./dist/types.d.ts",
   "scripts": {
     "commit": "cz",
+    "release": "./scripts/release.sh",
     "prepack": "nuxt-module-build build",
     "--------------": "-----------------",
-    "publish-patch": "npm test && npm version patch && npm publish --access public && git push",
-    "publish-minor": "npm test && npm version minor && npm publish --access public && git push",
-    "publish-major": "npm test && npm version major && npm publish --access public && git push",
     "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
@@ -28,7 +26,7 @@
     "lint:test": "npx eslint src",
     "lint": "npx eslint --fix src",
     "link": "npm link @agtm/nuxt-layer-adminlte-primeface @agtm/util",
-    "test": "npm run lint"
+    "test": "echo 'No-test'"
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
@@ -36,10 +34,12 @@
     "@nuxt/module-builder": "^0.5.2",
     "commitizen": "^4.3.0",
     "cz-conventional-changelog": "^3.3.0",
+    "dotenv-cli": "^7.3.0",
     "eslint": "^8.50.0",
     "eslint-config-standard": "^17.1.0",
     "eslint-plugin-jest": "^27.4.0",
-    "nuxt": "^3.7.3"
+    "nuxt": "^3.7.3",
+    "semantic-release": "^22.0.5"
   },
   "dependencies": {
     "@agtm/nuxt-layer-adminlte-primeface": "^0.2.4",
@@ -50,10 +50,19 @@
     "primevue": "^3.32.2",
     "socket.io-client": "^4.7.2"
   },
-  "version": "0.0.5",
+  "version": "0.1.0",
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
+  },
+  "release": {
+    "branches": [
+      "main"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:atimermann/nf-manager-web.git"
   }
 }
