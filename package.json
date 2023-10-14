@@ -20,6 +20,7 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
     "update": "npm update @agtm/nuxt-layer-adminlte-primeface && npm list @agtm/nuxt-layer-adminlte-primeface",
     "lint:test": "npx eslint src",
     "lint": "npx eslint --fix src",
@@ -36,13 +37,13 @@
     "eslint": "^8.50.0",
     "eslint-config-standard": "^17.1.0",
     "eslint-plugin-jest": "^27.4.0",
-    "nuxt": "^3.7.3",
     "semantic-release": "^22.0.5"
   },
   "dependencies": {
     "@agtm/nuxt-layer-adminlte-primeface": "^0.2.4",
     "@agtm/util": "^4.2.2",
     "@nuxt/kit": "^3.7.4",
+    "nuxt": "^3.7.3",
     "cronstrue": "^2.31.0",
     "lodash": "^4.17.21",
     "primevue": "^3.32.2",
