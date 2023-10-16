@@ -12,5 +12,8 @@ export default defineNuxtConfig({
       SOCKET_HOSTNAME: process.env.SOCKET_URL,
       SOCKET_PORT: process.env.SOCKET_PORT
     }
-  }
+  },
+  modules: [
+    '@agtm/nuxt-tools'
+  ]
 })
