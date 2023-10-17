@@ -43,9 +43,9 @@
     "semantic-release": "^22.0.5"
   },
   "dependencies": {
-    "@agtm/nuxt-layer-adminlte-primeface": "^0.2.4",
-    "@agtm/nuxt-tools": "1.2",
-    "@agtm/util": "^4.2.2",
+    "@agtm/nuxt-layer-adminlte-primeface": "^0.3.2",
+    "@agtm/nuxt-tools": "^1.2.2",
+    "@agtm/util": "^4.2.4",
     "@nuxt/kit": "^3.7.4",
     "cronstrue": "^2.31.0",
     "lodash": "^4.17.21",
