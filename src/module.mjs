@@ -12,12 +12,15 @@ export default defineNuxtModule({
   setup (options, nuxt) {
     const resolver = createResolver(import.meta.url)
 
-
     addComponent({
       name: 'NfManagerJobList', // name of the component to be used in vue templates
       filePath: resolver.resolve('runtime/components/JobList.vue')
     })
 
+    addComponent({
+      name: 'NfManagerJobPanel', // name of the component to be used in vue templates
+      filePath: resolver.resolve('runtime/components/JobPanel.vue')
+    })
 
   }
 })

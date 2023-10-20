@@ -1,12 +1,22 @@
 # Nf Manager Web
 
-Este projeto funciona tanto como um layer, como um módulo, como layer ele trás o frontend completo para gerenciar e
-monitorar sua aplicação usando node-framework, como modulo ele disponibiliza alguns assets como componentes prontos com
-listagem de monitoramento para você adaptar ao seu frontne já existente
+Este projeto funciona tanto como um layer re/ou como um módulo
+
+* Como layer trás um frontend completo para gerenciar e monitorar sua aplicação usando node-framework.
+
+* Como modulo disponibiliza alguns assets como componentes prontos com listagem de monitoramento para você adaptar
+  ao seu frontne já existente.
 
 ## Utilizando nf-manager-web como layer
 
 ## Utilizando nf-manager-web como modulo
+
+**IMPORTANTE**
+
+Na etapa de desenvolvimento, caso você esteja desenvolvendo este módulo e testando em outra aplicação, execute o
+seguinte comando para atualizar o modulo importando automaticamente:
+
+  npm run build-watch
 
 ## TODO:
 

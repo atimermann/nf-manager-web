@@ -15,5 +15,8 @@ export default defineNuxtConfig({
   },
   modules: [
     '@agtm/nuxt-tools'
-  ]
+  ],
+  imports: {
+    autoImport: false
+  }
 })

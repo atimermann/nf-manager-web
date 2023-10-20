@@ -29,7 +29,7 @@
           icon="pi pi-book"
           text
           size="small"
-          @click="toOverview(data.uuid)"
+          @click="$emit('toOverview', data.uuid, data)"
         />
       </template>
     </Column>
@@ -44,11 +44,13 @@ import Button from 'primevue/button'
 import { io } from 'socket.io-client'
 import cronstrue from 'cronstrue/i18n'
 
-import { ref, useSocketTools, navigateTo } from '#imports'
+import { ref, useSocketTools } from '#imports'
 
 const socket = useSocketTools.connect(io, '/jobs')
-
 let jobsIndex = {}
+
+// TODO: Renomear para toJobPanel
+defineEmits(['toOverview'])
 
 socket.on('connect', () => {
   console.info('Connection with server ok')
@@ -90,17 +92,6 @@ function updateJobsList () {
       errorCount: jobInfo.errorCount
     })
   })
-}
-
-/**
- * Navega para página de detalhes do Job
- *
- * @param uuid    Identificador do Job
- *
- * @returns {Promise<void>}
- */
-async function toOverview (uuid) {
-  await navigateTo(`/job-overview/${uuid}`)
 }
 
 </script>
